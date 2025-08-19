@@ -1,3 +1,5 @@
+import dotenv from "dotenv";
+dotenv.config({path: "./.env"});
 import path from "path";
 import fs from "fs";
 import pdfjsLib from "pdfjs-dist/legacy/build/pdf.js";
@@ -5,7 +7,7 @@ import { OpenAI } from "openai";
 
 // ✅ OpenRouter Configuration
 const openai = new OpenAI({
-  apiKey: "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", // ← Replace with your actual OpenRouter key
+  apiKey: process.env.OPENAI_API_KEY_NEW, // ← Replace with your actual OpenRouter key
   baseURL: "https://openrouter.ai/api/v1", // ← Required for OpenRouter
 });
 
