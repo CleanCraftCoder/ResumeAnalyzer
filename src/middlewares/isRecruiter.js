@@ -1,0 +1,1 @@
+// Checks if the user is a recruiter
